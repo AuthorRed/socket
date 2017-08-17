@@ -58,3 +58,4 @@ catalina.base_IS_UNDEFINED
 yc-par-portal/.tern-project
 trade-mobile/.tern-project
 trade-web/.tern-project
+/bin/
