@@ -2,7 +2,7 @@ package cn.author;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+//ThreadCondition是使用线程池与没使用线程池的对比
 public class ThreadCondition implements Runnable {
 	
 	private static int count=0;
