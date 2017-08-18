@@ -5,11 +5,14 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class SSocket {
 
 	public static void main(String[] args) throws Throwable {
-
+		//开启线程池
+		ExecutorService pool = Executors.newFixedThreadPool(10);
 		
 		System.out.println("服务器开始接收socket..");
 	    int port=12345;
@@ -20,8 +23,9 @@ public class SSocket {
 			while(true){
 				Socket socket = serverSocket.accept();
 				if(socket!=null){
-					Thread thread = new Thread(new SThread(socket));
-					thread.start();													
+					pool.execute(new SThread(socket));
+//					Thread thread = new Thread(new SThread(socket));
+//					thread.start();													
 				}
 			}
 		} catch (Exception e) {

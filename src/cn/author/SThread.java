@@ -33,12 +33,12 @@ public class SThread implements Runnable{
 				if(readUTF.contains("&")){
 					String[] splitStr = readUTF.split("&");					
 					System.out.println("服务器开始接收到的数据是："+splitStr[1]);
-					try {
-						Thread.sleep(2000);
-					} catch (InterruptedException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
+//					try {
+//						Thread.sleep(2000);
+//					} catch (InterruptedException e1) {
+//						// TODO Auto-generated catch block
+//						e1.printStackTrace();
+//					}
 				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
